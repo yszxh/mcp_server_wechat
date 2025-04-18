@@ -110,6 +110,8 @@ pip install mcp_server_wechat
 npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 ```
 
+![测试图](https://github.com/panxingfeng/mcp_server_wechat/edit/main/测试.png)
+
 ## 注意事项
 
 - 使用本工具需要保持微信桌面版处于登录状态
