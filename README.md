@@ -47,7 +47,7 @@ pip install mcp_server_wechat
 "mcpServers": {
   "wechat": {
     "command": "python",
-    "args": ["-m", "mcp_server_wechat"]
+    "args": ["-m", "mcp_server_wechat","--folder-path=存放历史记录的目录"]
   }
 }
 ```
