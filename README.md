@@ -35,6 +35,9 @@
 
 ```bash
 pip install mcp_server_wechat
+
+获取最新
+pip install --upgrade mcp_server_wechat
 ```
 
 ## 使用示例
