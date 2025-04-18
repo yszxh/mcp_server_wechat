@@ -111,6 +111,7 @@ npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 ```
 
 <img src="./测试.png" width="400" />
+<img src="./多工具测试.gif" width="400" />
 
 ## 注意事项
 
