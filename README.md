@@ -82,7 +82,7 @@ pip install mcp_server_wechat
   "name": "wechat_send_multiple_messages",
   "arguments": {
     "to_user": "张三",
-    "messages": ["你好", "这是第一条消息", "这是第二条消息"]
+    "messages": "你好","这是第一条消息","这是第二条消息"
   }
 }
 ```
@@ -93,7 +93,7 @@ pip install mcp_server_wechat
   "name": "wechat_send_to_multiple_friends",
   "arguments": {
     "to_user": ["张三", "李四", "王五"],
-    "message": "大家好，这是一条群发消息"
+    "message": "大家好，这是一条群发消息"/"你好，张三","你好，李四","你好，王五"
   }
 }
 ```
