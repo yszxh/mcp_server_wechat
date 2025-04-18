@@ -87,13 +87,13 @@ pip install mcp_server_wechat
 }
 ```
 
-4. 发送给多个好友:
+4. 发送给多个好友(单条消息):
 ```json
 {
   "name": "wechat_send_to_multiple_friends",
   "arguments": {
     "to_user": ["张三", "李四", "王五"],
-    "message": "大家好，这是一条群发消息"/"你好，张三","你好，李四","你好，王五"
+    "message": "大家好，这是一条群发消息"或者"你好，张三","你好，李四","你好，王五"
   }
 }
 ```
