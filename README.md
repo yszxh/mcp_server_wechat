@@ -1,16 +1,6 @@
 # MCP Server WeChat
 基于MCP技术的微信聊天记录获取和消息发送功能的服务器，使用[pywechat](https://github.com/Hello-Mr-Crab/pywechat)工具实现微信自动化操作。
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png" width="300" />
-  <br>
-  <em>基于我们自己的<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</em>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif" width="450" />
-</p>
-
 ## 功能特点
 此服务器提供以下主要功能：
 - 获取微信聊天记录（指定日期）
