@@ -110,7 +110,7 @@ pip install mcp_server_wechat
 npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 ```
 
-![测试图](https://github.com/panxingfeng/mcp_server_wechat/edit/main/测试.png)
+<img src="./测试.png" width="400" />
 
 ## 注意事项
 
