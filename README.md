@@ -12,7 +12,7 @@
 - `wechat_get_chat_history` - 获取特定日期的微信聊天记录
   - 必需参数:
     - `to_user` (string): 好友或群聊备注或昵称
-    - `target_date` (string): 目标日期，格式为YY/M/D，如25/3/22
+    - `target_date` (string): 目标日期，格式为YY/M/D，如25/3/22 -> 暂时不要跨度过长，适用于一周以内的聊天记录为佳，初始目的就是为了当日的聊天记录
 
 - `wechat_send_message` - 向单个微信好友发送单条消息
   - 必需参数:
