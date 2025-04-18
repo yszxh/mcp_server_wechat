@@ -2,11 +2,11 @@
 
 基于MCP技术的微信聊天记录获取和消息发送功能的服务器，使用[pywechat](https://github.com/Hello-Mr-Crab/pywechat)工具实现微信自动化操作。
 
-![测试截图](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/测试.png)
+![测试截图](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png)
 
 *基于我们自己的[chat_mcp](https://github.com/panxingfeng/chat_mcp)的测试*
 
-![多工具测试](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/多工具测试.gif)
+![多工具测试](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif)
 
 ## 功能特点
 
