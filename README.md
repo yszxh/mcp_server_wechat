@@ -2,6 +2,14 @@
 
 基于MCP技术的微信聊天记录获取和消息发送功能的服务器，使用[pywechat](https://github.com/Hello-Mr-Crab/pywechat)工具实现微信自动化操作。
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/测试.png" width="400" alt="测试截图"/>
+  
+  <p><i>基于我们自己的<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</i></p>
+  
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/多工具测试.gif" width="600" alt="多工具测试"/>
+</div>
+
 ## 功能特点
 
 此服务器提供以下主要功能：
@@ -110,17 +118,19 @@ pip install mcp_server_wechat
 npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 ```
 
-测试示例：
-<img src="./测试.png" width="400" /> 
+## 实际效果展示
 
-基于我自己的[chat_mcp](https://github.com/panxingfeng/chat_mcp)的测试视频
-<img src="./多工具测试.gif" width="400" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/功能演示.gif" width="600" alt="功能演示"/>
+  <p><i>与LLM集成效果演示</i></p>
+</div>
 
 ## 注意事项
 
 - 使用本工具需要保持微信桌面版处于登录状态
 - 获取聊天记录和发送消息需要确保微信窗口能够被正常操作
 - 在使用过程中，请勿手动操作微信窗口，以免干扰自动化操作
+- 请勿使用此工具进行任何违反微信服务协议的行为
 
 ## 许可证
 
