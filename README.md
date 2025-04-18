@@ -108,17 +108,18 @@ npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 
 ## 实际效果展示
 
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div style="text-align: center; max-width: 45%;">
-    <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png" width="300" />
-    <p><em>基于我们自己的<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</em></p>
-  </div>
-  <div style="text-align: center; max-width: 45%;">
-    <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif" width="300" />
-    <p><em>多工具处理演示</em></p>
-  </div>
-</div>
-
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png" width="330" /><br>
+      <em>基于我自己<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</em>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif" width="330" /><br>
+      <em>多工具处理演示</em>
+    </td>
+  </tr>
+</table>
 <p align="center">
   <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/功能演示.gif" width="450" />
   <br>
