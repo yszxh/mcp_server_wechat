@@ -2,13 +2,11 @@
 
 基于MCP技术的微信聊天记录获取和消息发送功能的服务器，使用[pywechat](https://github.com/Hello-Mr-Crab/pywechat)工具实现微信自动化操作。
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/测试.png" width="400" alt="测试截图"/>
-  
-  <p><i>基于我们自己的<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</i></p>
-  
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/多工具测试.gif" width="600" alt="多工具测试"/>
-</div>
+![测试截图](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/测试.png)
+
+*基于我们自己的[chat_mcp](https://github.com/panxingfeng/chat_mcp)的测试*
+
+![多工具测试](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/多工具测试.gif)
 
 ## 功能特点
 
@@ -120,10 +118,9 @@ npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 
 ## 实际效果展示
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/功能演示.gif" width="600" alt="功能演示"/>
-  <p><i>与LLM集成效果演示</i></p>
-</div>
+![功能演示](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/功能演示.gif)
+
+*与LLM集成效果演示*
 
 ## 注意事项
 
