@@ -2,6 +2,7 @@ import json
 import re
 import os
 import datetime
+import logging
 from typing import Optional, List, Union
 
 import pyautogui
@@ -26,6 +27,7 @@ class WeChatClient:
         - default_folder_path: 默认保存聊天记录的文件夹路径
         """
         self.default_folder_path = default_folder_path
+        self.logger = logging.getLogger(__name__)
 
     def get_chat_history_by_date(self, friend: str, target_date: str, folder_path: str = None,
                                  search_pages: int = 5, wechat_path: str = None, is_maximize: bool = False,
@@ -75,7 +77,6 @@ class WeChatClient:
 
                 if "昨天" in date_str:
                     yesterday = today - datetime.timedelta(days=1)
-                    # 返回datetime对象而不是date对象
                     return datetime.datetime.combine(yesterday, datetime.time())
 
                 if "星期" in date_str:
@@ -100,7 +101,7 @@ class WeChatClient:
 
                 return None
             except Exception as e:
-                print(f"日期解析错误: {date_str}, {e}")
+                self.logger.error(f"日期解析错误: {date_str}, {e}")
                 return None
 
         def get_info(contentList):
@@ -147,7 +148,7 @@ class WeChatClient:
         search_count = 0
         found_earlier_date = False
 
-        print(f"开始查找日期: {target_date}")
+        self.logger.info(f"开始查找日期: {target_date}")
 
         while not found_target_date:
             info = get_info(contentList)
@@ -179,16 +180,15 @@ class WeChatClient:
 
             search_count += 1
             if search_count % 10 == 0:
-                print(f"未找到目标日期，已翻页{search_count}次，继续查找...")
+                self.logger.warning(f"未找到目标日期，已翻页{search_count}次，继续查找...")
 
         if not found_target_date:
             chat_history_window.close()
-            print(f"未找到{target_date}的聊天记录，共翻页{search_count}次")
+            self.logger.warning(f"未找到{target_date}的聊天记录，共翻页{search_count}次")
             return json.dumps([], ensure_ascii=False, indent=4)
 
-        print(f"开始收集{target_date}的聊天记录")
+        self.logger.info(f"开始收集{target_date}的聊天记录")
 
-        # 先翻回到底部
         pyautogui.press('End')
 
         collect_count = 0
@@ -200,7 +200,6 @@ class WeChatClient:
             info = get_info(contentList)
 
             if not info:
-                print("已到达聊天记录开头")
                 break
 
             current_page_has_target = False
@@ -222,7 +221,7 @@ class WeChatClient:
                         page_has_earlier_date = True
 
             if not current_page_has_target and page_has_earlier_date and first_date_found:
-                print(f"已收集完{target_date}的所有聊天记录")
+                self.logger.info(f"已收集完{target_date}的所有聊天记录")
                 break
 
             # 继续向上翻页
@@ -232,7 +231,7 @@ class WeChatClient:
 
             collect_count += 1
             if collect_count % 10 == 0:
-                print(f"已翻页{collect_count}次，收集到{len(target_messages)}条消息，继续查找...")
+                self.logger.info(f"已翻页{collect_count}次，收集到{len(target_messages)}条消息，继续查找...")
 
         pyautogui.press('End')
 
@@ -251,22 +250,20 @@ class WeChatClient:
         chat_history_json = json.dumps(formatted_messages, ensure_ascii=False, indent=4)
 
         if folder_path:
-            safe_date = target_date.replace('/', '-')  # 将日期中的斜杠替换为短横线
+            safe_date = target_date.replace('/', '-') 
             json_path = os.path.abspath(os.path.join(folder_path, f'与{friend}的{safe_date}聊天记录.json'))
-
             os.makedirs(os.path.dirname(json_path), exist_ok=True)
 
             with open(json_path, 'w', encoding='utf-8') as f:
                 f.write(chat_history_json)
-            print(f"已保存JSON到: {json_path}")
+            self.logger.info(f"已保存JSON到: {json_path}")
 
-        # 关闭窗口
         chat_history_window.close()
 
         if not formatted_messages:
-            print(f"未找到{target_date}的聊天记录")
+            self.logger.warning(f"未找到{target_date}的聊天记录")
         else:
-            print(f"共获取到{len(formatted_messages)}条{target_date}的聊天记录")
+            self.logger.info(f"共获取到{len(formatted_messages)}条{target_date}的聊天记录")
 
         return chat_history_json
 
