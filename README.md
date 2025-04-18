@@ -1,24 +1,24 @@
 # MCP Server WeChat
-
 基于MCP技术的微信聊天记录获取和消息发送功能的服务器，使用[pywechat](https://github.com/Hello-Mr-Crab/pywechat)工具实现微信自动化操作。
 
-![测试截图](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/测试.png" width="300" />
+  <br>
+  <em>基于我们自己的<a href="https://github.com/panxingfeng/chat_mcp">chat_mcp</a>的测试</em>
+</p>
 
-*基于我们自己的[chat_mcp](https://github.com/panxingfeng/chat_mcp)的测试*
-
-![多工具测试](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif" width="450" />
+</p>
 
 ## 功能特点
-
 此服务器提供以下主要功能：
-
 - 获取微信聊天记录（指定日期）
 - 发送单条消息给单个好友
 - 发送多条消息给单个好友 
 - 发送消息给多个好友
 
 ## 可用工具
-
 - `wechat_get_chat_history` - 获取特定日期的微信聊天记录
   - 必需参数:
     - `to_user` (string): 好友或群聊备注或昵称
@@ -118,9 +118,11 @@ npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 
 ## 实际效果展示
 
-![功能演示](https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/img/功能演示.gif)
-
-*与LLM集成效果演示*
+<p align="center">
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/功能演示.gif" width="450" />
+  <br>
+  <em>与LLM集成效果演示</em>
+</p>
 
 ## 注意事项
 
