@@ -119,7 +119,7 @@ npx @modelcontextprotocol/inspector python -m mcp_server_wechat
 ## 实际效果展示
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/功能演示.gif" width="450" />
+  <img src="https://raw.githubusercontent.com/panxingfeng/mcp_server_wechat/main/多工具测试.gif" width="450" />
   <br>
   <em>与LLM集成效果演示</em>
 </p>
