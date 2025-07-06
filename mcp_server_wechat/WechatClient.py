@@ -285,7 +285,7 @@ class WeChatClient:
             Messages.send_message_to_friend(
                 friend=friend,
                 message=message,
-                delay=delay,
+                # delay=delay,
                 search_pages=search_pages
             )
             return {"status": "success", "message": f"消息已发送给 {friend}"}
@@ -310,7 +310,7 @@ class WeChatClient:
             Messages.send_messages_to_friend(
                 friend=friend,
                 messages=messages,
-                delay=delay,
+                # delay=delay,
                 search_pages=search_pages
             )
             return {"status": "success", "message": f"已向 {friend} 发送 {len(messages)} 条消息"}
@@ -333,7 +333,7 @@ class WeChatClient:
             Messages.send_message_to_friends(
                 friends=friends,
                 message=message,
-                delay=delay
+                # delay=delay
             )
             return {"status": "success", "message": f"已向 {len(friends)} 位好友发送消息"}
         except Exception as e:
@@ -355,7 +355,7 @@ class WeChatClient:
             Messages.send_messages_to_friends(
                 friends=friends,
                 messages=messages,
-                delay=delay
+                # delay=delay
             )
             return {"status": "success", "message": f"已向 {len(friends)} 位好友发送消息"}
         except Exception as e:
