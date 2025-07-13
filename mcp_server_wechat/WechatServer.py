@@ -172,13 +172,11 @@ class WeChatServer:
                     if not friend or not message:
                         raise ValueError("缺少必要参数: to_user 或 message")
 
-                    delay = arguments.get("delay", 1)
                     search_pages = arguments.get("search_pages", 0)
 
                     result = self.wechat_client.send_message_to_friend(
                         friend=friend,
                         message=message,
-                        delay=delay,
                         search_pages=search_pages
                     )
 
@@ -203,13 +201,11 @@ class WeChatServer:
                     if not isinstance(messages, list):
                         messages = [messages]
 
-                    delay = arguments.get("delay", 1)
                     search_pages = arguments.get("search_pages", 0)
 
                     result = self.wechat_client.send_messages_to_friend(
                         friend=friend,
                         messages=messages,
-                        delay=delay,
                         search_pages=search_pages
                     )
 
@@ -258,12 +254,9 @@ class WeChatServer:
                     elif len(messages) > len(friends):
                         messages = messages[:len(friends)]
 
-                    delay = arguments.get("delay", 1)
-
                     result = self.wechat_client.send_message_to_friends(
                         friends=friends,
-                        message=messages,
-                        delay=delay
+                        message=messages
                     )
 
                     return [TextContent(type="text", text=json.dumps(result, ensure_ascii=False))]
