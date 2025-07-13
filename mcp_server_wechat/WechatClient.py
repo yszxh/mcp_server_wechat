@@ -267,15 +267,13 @@ class WeChatClient:
 
         return chat_history_json
 
-    def send_message_to_friend(self, friend: str, message: str, delay: int = 1,
-                               search_pages: int = 0):
+    def send_message_to_friend(self, friend: str, message: str, search_pages: int = 0):
         """
         向单个好友发送单条消息
 
         参数:
         - friend: 好友或群聊备注或昵称
         - message: 要发送的消息
-        - delay: 发送延迟时间(秒)
         - search_pages: 搜索好友时翻页次数
 
         返回:
@@ -285,7 +283,6 @@ class WeChatClient:
             Messages.send_message_to_friend(
                 friend=friend,
                 message=message,
-                # delay=delay,
                 search_pages=search_pages
             )
             return {"status": "success", "message": f"消息已发送给 {friend}"}
