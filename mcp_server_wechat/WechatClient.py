@@ -289,15 +289,13 @@ class WeChatClient:
         except Exception as e:
             return {"status": "error", "message": f"发送消息失败: {str(e)}"}
 
-    def send_messages_to_friend(self, friend: str, messages: List[str], delay: int = 1,
-                                search_pages: int = 0):
+    def send_messages_to_friend(self, friend: str, messages: List[str], search_pages: int = 0):
         """
         向单个好友发送多条消息
 
         参数:
         - friend: 好友或群聊备注或昵称
         - messages: 要发送的消息列表
-        - delay: 发送延迟时间(秒)
         - search_pages: 搜索好友时翻页次数
 
         返回:
@@ -307,21 +305,19 @@ class WeChatClient:
             Messages.send_messages_to_friend(
                 friend=friend,
                 messages=messages,
-                # delay=delay,
                 search_pages=search_pages
             )
             return {"status": "success", "message": f"已向 {friend} 发送 {len(messages)} 条消息"}
         except Exception as e:
             return {"status": "error", "message": f"发送消息失败: {str(e)}"}
 
-    def send_message_to_friends(self, friends: List[str], message: Union[str, List[str]], delay: int = 1):
+    def send_message_to_friends(self, friends: List[str], message: Union[str, List[str]]):
         """
         向多个好友发送消息
 
         参数:
         - friends: 好友或群聊备注或昵称列表
         - message: 要发送的消息或针对每个好友的消息列表
-        - delay: 发送延迟时间(秒)
 
         返回:
         - 发送结果
@@ -329,21 +325,19 @@ class WeChatClient:
         try:
             Messages.send_message_to_friends(
                 friends=friends,
-                message=message,
-                # delay=delay
+                message=message
             )
             return {"status": "success", "message": f"已向 {len(friends)} 位好友发送消息"}
         except Exception as e:
             return {"status": "error", "message": f"发送消息失败: {str(e)}"}
 
-    def send_messages_to_friends(self, friends: List[str], messages: List[List[str]], delay: int = 1):
+    def send_messages_to_friends(self, friends: List[str], messages: List[List[str]]):
         """
         向多个好友发送多条消息
 
         参数:
         - friends: 好友或群聊备注或昵称列表
         - messages: 针对每个好友的消息列表的列表
-        - delay: 发送延迟时间(秒)
 
         返回:
         - 发送结果
@@ -351,8 +345,7 @@ class WeChatClient:
         try:
             Messages.send_messages_to_friends(
                 friends=friends,
-                messages=messages,
-                # delay=delay
+                messages=messages
             )
             return {"status": "success", "message": f"已向 {len(friends)} 位好友发送消息"}
         except Exception as e:
